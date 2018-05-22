@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div padding>
+      <h1>Hola {{ auth.userName }}</h1>
+        <button ion-button block (click)="showToken()">Mostrar Token XD</button>
+        <button ion-button block (click)="removeToken()">Borrar Token</button>
+      </div>
+  <ion-fab bottom right>
+    <button ion-fab color="primary">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+
+    <ion-fab-list side="top">
+        <button ion-fab color="" onclick="window.open('https://www.facebook.com','system','location=yes')"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab color="" onclick="window.open('https://google.com','system','location=yes')"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

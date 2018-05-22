@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Detalle
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   <h3>Detalle del producto</h3>
+
+   <ion-card>
+
+      <ion-card-header>
+          {{ inventario?.producto }}
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Add card content here! -->
+        <ion-card-title>
+          Descripcion del producto
+        </ion-card-title>
+
+        <p>Precio: {{ inventario?.precio }}</p>
+        <p>Existencia: {{ inventario?.existencia }}</p>
+        <p>Proveedor: {{ inventario?.proveedor }}</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+            <button ion-button color="primary" (click)="onEditar()" icon-left>
+              <ion-icon name="create"></ion-icon>  
+              Editar
+            </button>
+        </ion-col>
+        <ion-col>
+            <button ion-button color="danger" (click)="onEliminar()" icon-left>
+              <ion-icon name="trash"></ion-icon>  
+              Eliminar
+            </button>
+        </ion-col>
+      </ion-row>
+    
+    </ion-card>
+  </ion-content>
